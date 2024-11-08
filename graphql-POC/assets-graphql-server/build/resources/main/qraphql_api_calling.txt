@@ -1,0 +1,40 @@
+http://localhost:8086/graphiql
+
+
+query FindAll {
+  findAll {
+    id
+  }
+}
+
+query FindOne {
+  findOne(id:"2") {
+    name
+  }
+}
+
+mutation CreatePlayer {
+  create(name: "Ankit M", team: IN) {
+    id
+  }
+}
+
+ mutation deletePlayerById {
+  delete(id: "3") {
+    id
+  }
+} 
+query FindOneUser {
+  getUser(id:15) {
+    name
+  }
+}
+query FindUserWithPosts {
+    getUser(id: 15) {
+        name
+        posts {
+            title
+            content
+        }
+    }
+}
